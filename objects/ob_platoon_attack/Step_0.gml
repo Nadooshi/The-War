@@ -17,16 +17,20 @@ event_inherited()
 if not instance_exists(pl_target)
 	exit;
 
+var _tg = pl_target.tg_id;
+if _tg = noone or _tg = id or not instance_exists(_tg)
+	exit;
+
 if ready_to_attack
 if att_dist_max > 0 // если может атаковать...
-if pl_target.tg_id != noone {
-	var _d = distance_to_object(pl_target.tg_id)
+if _tg != noone {
+	var _d = distance_to_object(_tg)
 	if (_d < att_dist_max) and (_d > att_dist_min) {
 		ready_to_attack = false;
 		var av_x = (x + pl_target.x) / 2
 		var av_y = (y + pl_target.y) / 2
 		mark_attack = instance_create_layer(av_x, av_y, "markers_layer", ob_attack_direct)
-		mark_attack.def_side = pl_target.tg_id
+		mark_attack.def_side = _tg
 		mark_attack.att_side = id
 	
 		endmove(move_path)
@@ -35,8 +39,8 @@ if pl_target.tg_id != noone {
 
 
 	// shooting
-	if instance_exists(pl_target.tg_id)
-	if object_is_ancestor(pl_target.tg_id.object_index, ob_platoon)
+	if instance_exists(_tg)
+	if object_is_ancestor(_tg.object_index, ob_platoon)
 	if cur_think == think.attack {
 		var _def_pl = mark_attack.def_side;
 		for (var i = 0; i < array_length(unit_weapon); i++) {

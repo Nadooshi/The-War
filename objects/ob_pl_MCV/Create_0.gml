@@ -12,6 +12,8 @@ deploy_time = sec_to_step(10)
 
 max_health = 300
 cur_health = 300
+unit_health = 300
+cur_unit_health = unit_health
 
 deploy = false;
 d_t_pic_alfa = 0;

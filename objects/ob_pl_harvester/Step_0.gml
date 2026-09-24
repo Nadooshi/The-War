@@ -84,4 +84,5 @@ switch cur_think {
 	break;	
 	}
 }
+UI_progress = in_cargo / maxval_cargo
 

@@ -3,14 +3,8 @@ visible = false;
 switch type_bar {
 	case 0: {
 		if instance_exists(traced_id) {
-			var _prog = traced_id.UI_progress;
-			if traced_id.object_index = ob_pl_harvester {
-				_prog = traced_id.in_cargo / traced_id.maxval_cargo;
-				visible = true;
-			} else {
-				visible = _prog > 0;
-			}
-			image_xscale = clamp(4 * _prog, 0.5, 4)
+			visible = traced_id.UI_progress > 0;
+			image_xscale = clamp(4 * traced_id.UI_progress, 0.5, 4)
 		} else {
 			visible = false;
 		}
