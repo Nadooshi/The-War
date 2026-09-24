@@ -32,6 +32,7 @@ is_dead = false;
 max_health = 0;
 cur_health = 0;
 movement = type_move.pathing
+ignore_obstacles = false;
 base_box = noone;
 direction_idle = -1;
 
@@ -76,9 +77,9 @@ function move_smooth(_pl_target){
 			image_speed = 1;
 			var _dir = point_direction(x, y, _pl_target.x, _pl_target.y);
 			var _dist = point_distance(x, y, _pl_target.x, _pl_target.y);
-			image_angle = lerp(image_angle, _dir, 0.01)
-			direction = lerp(direction, _dir, 0.01)
-			speed = pl_speed;
+			direction += angle_difference(_dir, direction) * 0.2;
+			image_angle = direction;
+			speed = min(pl_speed, _dist * 0.2);
 		}
 }
 //=================================================================================

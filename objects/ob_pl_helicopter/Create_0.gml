@@ -7,7 +7,8 @@ unit_name = "Helicopter"
 
 pl_speed = 0.8;
 unit_health = 150
-movement = type_move.direct
+movement = type_move.pathing
+ignore_obstacles = true;
 
 att_dist_max = 5 * 32 // клетки * пиксели. Дистанция в пикселях.
 att_dist_min = 1 * 32

@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Временные шкалы","folderPath":"folders/Временные шкалы.yy","name":"Временные шкалы","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Звуки","folderPath":"folders/Звуки.yy","name":"Звуки","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Кривые анимации","folderPath":"folders/Кривые анимации.yy","name":"Кривые анимации","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -35,14 +36,16 @@
     {"$GMFolder":"","%Name":"In_battle","folderPath":"folders/Спрайты/Unit_picture/In_battle.yy","name":"In_battle","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Шейдеры","folderPath":"folders/Шейдеры.yy","name":"Шейдеры","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Шрифты","folderPath":"folders/Шрифты.yy","name":"Шрифты","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.gm_filter_whitenoise-1.0.0","name":"io.gamemaker.gm_filter_whitenoise-1.0.0","path":"io.gamemaker.gm_filter_whitenoise-1.0.0.yyp",},
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+  ],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2023.11.1.129",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"The War",
   "resources":[
@@ -104,6 +107,7 @@
     {"id":{"name":"sc_create_unit","path":"scripts/sc_create_unit/sc_create_unit.yy",},},
     {"id":{"name":"sc_find_nearest_platoon","path":"scripts/sc_find_nearest_platoon/sc_find_nearest_platoon.yy",},},
     {"id":{"name":"sc_formations","path":"scripts/sc_formations/sc_formations.yy",},},
+    {"id":{"name":"sc_free_cell","path":"scripts/sc_free_cell/sc_free_cell.yy",},},
     {"id":{"name":"sc_init_target","path":"scripts/sc_init_target/sc_init_target.yy",},},
     {"id":{"name":"sc_sec_to_step","path":"scripts/sc_sec_to_step/sc_sec_to_step.yy",},},
     {"id":{"name":"sc_step_to_sec","path":"scripts/sc_step_to_sec/sc_step_to_sec.yy",},},

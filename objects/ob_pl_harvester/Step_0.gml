@@ -66,15 +66,15 @@ switch cur_think {
 	}
 	case think.unload: {
 		var _ob_base = instance_position(x, y, ob_refinery);
-		x = _ob_base.x;
-		y = _ob_base.y - 6;
-		image_angle = 0;
 		if in_cargo = 0 or _ob_base = noone {
 			cur_think = think.idle
 			if instance_exists(_ob_base)
 				_ob_base.qe_unit = noone;
 			break;
 		} else {
+			x = _ob_base.x;
+			y = _ob_base.y - 6;
+			image_angle = 0;
 			if ob_player_incpector.capasity_money > global.money {
 				global.money++
 				in_cargo = max(in_cargo - 1, 0)

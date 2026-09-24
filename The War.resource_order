@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings":[
+    {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Временные шкалы","order":8,"path":"folders/Временные шкалы.yy",},
     {"name":"Звуки","order":3,"path":"folders/Звуки.yy",},
     {"name":"Кривые анимации","order":12,"path":"folders/Кривые анимации.yy",},
@@ -23,7 +24,6 @@
     {"name":"In_battle","order":6,"path":"folders/Спрайты/Unit_picture/In_battle.yy",},
     {"name":"Шейдеры","order":6,"path":"folders/Шейдеры.yy",},
     {"name":"Шрифты","order":7,"path":"folders/Шрифты.yy",},
-    {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"ob_aircraft","order":10,"path":"objects/ob_aircraft/ob_aircraft.yy",},
@@ -75,6 +75,7 @@
     {"name":"sc_calculators","order":1,"path":"scripts/sc_calculators/sc_calculators.yy",},
     {"name":"sc_create_unit","order":9,"path":"scripts/sc_create_unit/sc_create_unit.yy",},
     {"name":"sc_find_nearest_platoon","order":7,"path":"scripts/sc_find_nearest_platoon/sc_find_nearest_platoon.yy",},
+    {"name":"sc_free_cell","order":7,"path":"scripts/sc_free_cell/sc_free_cell.yy",},
     {"name":"sc_init_target","order":10,"path":"scripts/sc_init_target/sc_init_target.yy",},
     {"name":"sc_step_to_sec","order":1,"path":"scripts/sc_step_to_sec/sc_step_to_sec.yy",},
     {"name":"sc_unitlist","order":3,"path":"scripts/sc_unitlist/sc_unitlist.yy",},

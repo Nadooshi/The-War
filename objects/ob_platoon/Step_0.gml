@@ -17,9 +17,19 @@ switch movement{
 	case type_move.pathing: {	
 		if not path_exists(move_path)
 		if instance_exists(pl_target) {
-			mp_grid_add_instances(global.grid, ob_entity, false)
-			mp_grid_clear_cell(global.grid, floor(x / 32), floor(y / 32))
-			mp_grid_clear_cell(global.grid, floor(pl_target.x / 32), floor(pl_target.y / 32))
+			if ignore_obstacles {
+				if instance_position(pl_target.x, pl_target.y, ob_base) != noone {
+					var _c = find_free_cell(floor(pl_target.x / 32), floor(pl_target.y / 32))
+					pl_target.x = _c[0] * 32 + 16
+					pl_target.y = _c[1] * 32 + 16
+					pl_target.tg_id = noone
+				}
+				mp_grid_clear_all(global.grid)
+			} else {
+				mp_grid_add_instances(global.grid, ob_entity, false)
+				mp_grid_clear_cell(global.grid, floor(x / 32), floor(y / 32))
+				mp_grid_clear_cell(global.grid, floor(pl_target.x / 32), floor(pl_target.y / 32))
+			}
 			move_path = path_add()
 			if (mp_grid_path(global.grid, move_path,x, y, pl_target.x, pl_target.y, true)){
 				path_start(move_path, pl_speed, path_action_stop, false)
@@ -35,13 +45,12 @@ switch movement{
 	}
 	case type_move.direct: {
 		if instance_exists(pl_target) {
+			var _dir = point_direction(x, y, pl_target.x, pl_target.y);
 			var _dist = point_distance(x, y, pl_target.x, pl_target.y);
 			if (_dist > 1) {
-				//mp_potential_step(ob_pl_target.x, ob_pl_target.y, pl_speed, true);
-				var _dir = point_direction(x, y, ob_pl_target.x, ob_pl_target.y);
-				speed = pl_speed
-				direction = lerp(direction, _dir, 0.03)
-				image_angle = lerp(image_angle, _dir, 0.03);
+				direction += angle_difference(_dir, direction) * 0.2;
+				image_angle = direction;
+				speed = min(pl_speed, _dist * 0.2);
 			} else {
 				cur_think = think.idle;
 				speed = 0;
