@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sc_calculators",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sc_calculators",
+  "parent":{
+    "name":"inbattle",
+    "path":"folders/Скрипты/inbattle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

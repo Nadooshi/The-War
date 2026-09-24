@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sc_formations",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sc_formations",
+  "parent":{
+    "name":"inbattle",
+    "path":"folders/Скрипты/inbattle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

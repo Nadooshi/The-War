@@ -1,0 +1,40 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ts_ground_dirtsand",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"dirtsand","closed_edge":false,"name":"dirtsand","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ts_ground_dirtsand",
+  "out_columns":5,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Наборы плиток",
+    "path":"folders/Наборы плиток.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"sp_groung_ts",
+    "path":"sprites/sp_groung_ts/sp_groung_ts.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":24,
+}

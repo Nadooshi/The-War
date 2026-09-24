@@ -1,0 +1,22 @@
+{
+  "$GMPath":"",
+  "%Name":"pt_formation_1",
+  "closed":false,
+  "kind":0,
+  "name":"pt_formation_1",
+  "parent":{
+    "name":"Пути",
+    "path":"folders/Пути.yy",
+  },
+  "points":[
+    {"speed":0.0,"x":0.0,"y":0.0,},
+    {"speed":100.0,"x":-125.5,"y":126.0,},
+    {"speed":100.0,"x":1.5,"y":-128.0,},
+    {"speed":100.0,"x":-126.5,"y":-3.0,},
+    {"speed":100.0,"x":-258.5,"y":124.0,},
+    {"speed":100.0,"x":-127.5,"y":-132.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
