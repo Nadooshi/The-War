@@ -8,6 +8,7 @@
     {"name":"Объекты","order":9,"path":"folders/Объекты.yy",},
     {"name":"Bases","order":8,"path":"folders/Объекты/battlefield/Bases.yy",},
     {"name":"Units","order":9,"path":"folders/Объекты/battlefield/Units.yy",},
+    {"name":"Explodes","order":6,"path":"folders/Объекты/Explodes.yy",},
     {"name":"In_battle","order":2,"path":"folders/Объекты/In_battle.yy",},
     {"name":"UI","order":1,"path":"folders/Объекты/UI.yy",},
     {"name":"Последовательности","order":11,"path":"folders/Последовательности.yy",},

@@ -1,4 +1,7 @@
 /// @desc
+if keyboard_check_pressed(vk_f3)
+	show_debug = !show_debug;
+
 if global.money + pice_money_tic > 0
 	global.money = max(global.money + pice_money_tic, 0)
 	
