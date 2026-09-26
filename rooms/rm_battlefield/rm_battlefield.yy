@@ -109,7 +109,7 @@
         {"name":"g_WhiteNoiseIntensity","type":0,"value":"1",},
         {"name":"g_WhiteNoiseAnimation","type":0,"value":"0.025",},
         {"name":"g_WhiteNoiseTexture","type":2,"value":"_filter_whitenoise_noise",},
-      ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+      ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
   ],
   "name":"rm_battlefield",
   "parent":{
@@ -135,7 +135,7 @@
   "sequenceId":null,
   "views":[
     {"hborder":64,"hport":1080,"hspeed":4,"hview":540,"inherit":false,"objectId":{"name":"ob_cursor","path":"objects/ob_cursor/ob_cursor.yy",},"vborder":64,"visible":true,"vspeed":4,"wport":1920,"wview":960,"xport":0,"xview":0,"yport":0,"yview":0,},
-    {"hborder":0,"hport":108,"hspeed":-1,"hview":1080,"inherit":false,"objectId":null,"vborder":0,"visible":false,"vspeed":0,"wport":385,"wview":3840,"xport":1530,"xview":0,"yport":967,"yview":1090,},
+    {"hborder":0,"hport":108,"hspeed":-1,"hview":1080,"inherit":false,"objectId":null,"vborder":0,"visible":false,"vspeed":0,"wport":385,"wview":3840,"xport":1530,"xview":0,"yport":967,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
@@ -144,7 +144,7 @@
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
   ],
   "viewSettings":{
-    "clearDisplayBuffer":true,
+    "clearDisplayBuffer":false,
     "clearViewBackground":false,
     "enableViews":true,
     "inheritViewSettings":false,

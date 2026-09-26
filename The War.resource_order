@@ -20,6 +20,7 @@
     {"name":"Спрайты","order":1,"path":"folders/Спрайты.yy",},
     {"name":"Base_picture","order":5,"path":"folders/Спрайты/Base_picture.yy",},
     {"name":"Buildings","order":9,"path":"folders/Спрайты/Base_picture/Buildings.yy",},
+    {"name":"Explodes","order":17,"path":"folders/Спрайты/Explodes.yy",},
     {"name":"Unit_picture","order":10,"path":"folders/Спрайты/Unit_picture.yy",},
     {"name":"In_battle","order":6,"path":"folders/Спрайты/Unit_picture/In_battle.yy",},
     {"name":"Шейдеры","order":6,"path":"folders/Шейдеры.yy",},
@@ -155,6 +156,7 @@
     {"name":"sp_unitmedic","order":10,"path":"sprites/sp_unitmedic/sp_unitmedic.yy",},
     {"name":"sp_unittank_smpic","order":7,"path":"sprites/sp_unittank_smpic/sp_unittank_smpic.yy",},
     {"name":"sp_unittank","order":1,"path":"sprites/sp_unittank/sp_unittank.yy",},
+    {"name":"sp_wnoise","order":18,"path":"sprites/sp_wnoise/sp_wnoise.yy",},
     {"name":"ts_road","order":2,"path":"tilesets/ts_road/ts_road.yy",},
   ],
 }
