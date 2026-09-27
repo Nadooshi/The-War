@@ -1,4 +1,4 @@
-/// @desc
+/// @desc movement
 // check to death
 if array_length(units_inplatoon) = 0 {
 	if instance_exists(pl_target)

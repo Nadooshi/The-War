@@ -49,9 +49,13 @@ if _tg != noone {
 				var _dmg = unit_weapon[i].damage * dam_mod + dam_upg;
 				for (var _u = 0; _u < array_length(units_inplatoon); _u++)
 				for (var _nf = 0; _nf < unit_weapon[i].number_fire; _nf++) {
-					if array_length(_def_pl.units_inplatoon) = 0 {
-						cur_think = think.idle;
-						break;
+					if movement != type_move.circuite {
+						if array_length(_def_pl.units_inplatoon) = 0 {
+							cur_think = think.idle;
+							break;
+						}
+					} else {
+						cur_think = think.move
 					}
 					var target_index = max(irandom_range(0, array_length(_def_pl.units_inplatoon) - 1), 0);
 					var _t_br = _def_pl.units_inplatoon[target_index].unit_type_brone;
