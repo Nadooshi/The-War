@@ -19,7 +19,6 @@
     {"$GMFolder":"","%Name":"battlefield","folderPath":"folders/Объекты/battlefield.yy","name":"battlefield","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Bases","folderPath":"folders/Объекты/battlefield/Bases.yy","name":"Bases","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Units","folderPath":"folders/Объекты/battlefield/Units.yy","name":"Units","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Explodes","folderPath":"folders/Объекты/Explodes.yy","name":"Explodes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"In_battle","folderPath":"folders/Объекты/In_battle.yy","name":"In_battle","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Объекты/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"base menu","folderPath":"folders/Объекты/UI/base menu.yy","name":"base menu","resourceType":"GMFolder","resourceVersion":"2.0",},

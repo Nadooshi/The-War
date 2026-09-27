@@ -7,5 +7,3 @@ pow_val = 0; // electricity value
 
 pice_money_tic = 0;
 
-show_debug = false;
-
