@@ -23,7 +23,7 @@
   ],
   "name":"sp_unitfighter",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"In_battle",
     "path":"folders/Спрайты/Unit_picture/In_battle.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":64,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

@@ -33,6 +33,9 @@ if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
 
 // Unit list Vehicle
+_unit = new unit(base_menu.vehicle, "Sand buggy", "sp_unitbuggy", "", 150, 3, ob_pl_buggy, 2, noone);
+if _unit.base_is == b_is or b_is = base_menu.any
+	array_push(arr_unit, _unit);
 
 _unit = new unit(base_menu.vehicle, "Battle tank", "sp_unittank", "", 450, 5, ob_pl_tank, 3, noone);
 if _unit.base_is == b_is or b_is = base_menu.any
