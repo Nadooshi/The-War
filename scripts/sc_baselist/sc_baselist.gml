@@ -26,7 +26,10 @@ array_push(base, _item)
 _item = new b_item("Silo", 200, -5, 5, "sp_silo", ob_silo, 1, "Refinery")
 array_push(base, _item)
 
-_item = new b_item("Barracks", 300, -10, 10, "sp_barrack", ob_barrack, 2, "Power plant")
+_item = new b_item("Barracks", 300, -10, 5, "sp_barrack", ob_barrack, 2, "Power plant")
+array_push(base, _item)
+
+_item = new b_item("Veh. factory", 500, -25, 5, "sp_vehicle", ob_vehicle, 2, "Refinery")
 array_push(base, _item)
 
 _item = new b_item("Comm. center", 500, -20, 5, "sp_command", ob_command, 3, "Barracks")

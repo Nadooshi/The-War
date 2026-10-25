@@ -22,6 +22,8 @@ var b_is = _base_menu
 var arr_unit = _array;
 var _unit = undefined;
 
+//unit list Barrack
+
 _unit = new unit(base_menu.barrack, "Infantry", "sp_unitinfantry", "", 50, 5, ob_pl_infantry, 1, noone);
 if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
@@ -30,11 +32,23 @@ _unit = new unit(base_menu.barrack, "Medic truck", "sp_unitmedic", "Comm. center
 if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
 
+// Unit list Vehicle
 
+_unit = new unit(base_menu.vehicle, "Battle tank", "sp_unittank", "", 450, 5, ob_pl_tank, 3, noone);
+if _unit.base_is == b_is or b_is = base_menu.any
+	array_push(arr_unit, _unit);
 
+_unit = new unit(base_menu.vehicle, "Harvester", "sp_unitharvester", "Refinery", 400, 3, ob_pl_harvester, 3, noone);
+if _unit.base_is == b_is or b_is = base_menu.any
+	array_push(arr_unit, _unit);
 
+_unit = new unit(base_menu.vehicle, "MCV", "sp_unitMCV", "Comm. center", 999, 15, ob_pl_MCV, 10, noone);
+if _unit.base_is == b_is or b_is = base_menu.any
+	array_push(arr_unit, _unit);
 
-_unit = new unit(base_menu.starport, "Medic truck", "sp_unitmedic", "Comm. center", 250, 5, ob_pl_medic, 3, noone);
+// Unit lict Starport
+
+_unit = new unit(base_menu.starport, "Medic truck", "sp_unitmedic", "", 250, 5, ob_pl_medic, 3, noone);
 if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
 
@@ -49,6 +63,8 @@ if _unit.base_is == b_is or b_is = base_menu.any
 _unit = new unit(base_menu.starport, "MCV", "sp_unitMCV", "", 999, 15, ob_pl_MCV, 10, noone);
 if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
+
+// unit list Aircraft
 
 _unit = new unit(base_menu.aircraft, "Helicopter", "sp_unithelicopter", "Comm. center", 650, 25, ob_pl_helicopter, 3, noone);
 if _unit.base_is == b_is or b_is = base_menu.any

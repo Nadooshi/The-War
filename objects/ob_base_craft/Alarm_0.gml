@@ -1,4 +1,7 @@
 /// @desc
+b_ready = 1;
+ob_player_incpector.pice_money_tic = 0;
+
 var _box = noone;
 if b_menu[cur_item].needbox != noone {
 	var n_box = instance_number(b_menu[cur_item].needbox)
