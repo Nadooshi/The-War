@@ -1,10 +1,12 @@
 /// @desc
-if control_player = 0 {
-	if global.money <= 50 {
-		if not instance_exists(marker)
-			marker = instance_create_layer(x, y, "markers_layer", ob_mark_ok, {sprite_index : sp_mark_nomoney})
-	} else {
-		instance_destroy(marker)
+if control_player >= 0 {
+	if control_player == 0 {
+		if global.money[control_player] <= 50 {
+			if not instance_exists(marker)
+				marker = instance_create_layer(x, y, "markers_layer", ob_mark_ok, {sprite_index : sp_mark_nomoney})
+		} else {
+			instance_destroy(marker)
+		}
 	}
 
 	// создаём бесплатный харвестер если нет ни одного.
@@ -15,22 +17,42 @@ if control_player = 0 {
 			break;
 		}
 	if not _ok {
-		var _h = noone;
-		_h = instance_create_layer(0, 0, "units_layer", ob_pl_harvester) 
+		var _h = instance_create_layer(x, y, "units_layer", ob_pl_harvester);
 		_h.control_player = control_player
 		array_push(_h.units_inplatoon, ob_pl_harvester)
 		_h.pl_freeplace -= 3;
-		
-		with instance_create_layer(0, 0, "markers_layer", ob_pl_reinforcement) {
-			in_cargo = _h;
-			pl_target = instance_create_layer(other.x, other.y, "markers_layer", ob_pl_target);
-			pl_target.tg_id = other.id;
-			pl_target.master_id = id;
-			cur_think = think.move;
+
+		if control_player = 0 {
+			// человек: харвестер прилетает транспортом с ближайшей точки границы комнаты
+			var _bx = x;
+			var _by = y;
+			if min(x, room_width - x) < min(y, room_height - y) {
+				// ближе левый/правый край
+				if x < room_width - x
+					_bx = 32;
+				else
+					_bx = room_width - 32;
+			} else {
+				// ближе верхний/нижний край
+				if y < room_height - y
+					_by = 32;
+				else
+					_by = room_height - 32;
+			}
+			_h.x = _bx;
+			_h.y = _by;
+
+			with instance_create_layer(_bx, _by, "markers_layer", ob_pl_reinforcement) {
+				in_cargo = _h;
+				pl_target = instance_create_layer(other.x, other.y, "markers_layer", ob_pl_target);
+				pl_target.tg_id = other.id;
+				pl_target.master_id = id;
+				cur_think = think.move;
+			}
 		}
 	}
-//------------------------------------------------------------------------------
 }
+//------------------------------------------------------------------------------
 
 if qe_unit != noone {
 	if not instance_exists(qe_unit)

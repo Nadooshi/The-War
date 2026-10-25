@@ -1,6 +1,7 @@
 /// @desc
 
-ob_player_incpector.capasity_money -= capacity_money
+if control_player >= 0
+	global.capasity_money[control_player] -= capacity_money
 
 
 

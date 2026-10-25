@@ -13,8 +13,8 @@ if global.select_item <> -1 {
 			alarm_set(0, _t)
 			time_build = _t
 		}
-	if (global.money - _b_item.cost) >= 0 {
-		global.money -= _b_item.cost;
+	if (global.money[control_player] - _b_item.cost) >= 0 {
+		global.money[control_player] -= _b_item.cost;
 	} else {
 		show_message("Not enough money!")
 		global.select_item = -1;

@@ -14,7 +14,7 @@ if global.select_item <> -1 {
 			time_build = _t
 		}
 	b_pice = -_b_item.cost / sec_to_step(_b_item.b_time)
-	ob_player_incpector.pice_money_tic = b_pice
+	global.pice_money_tic[control_player] = b_pice
 }
 
 if b_ready = 0 {
@@ -27,18 +27,18 @@ if b_ready = 0 {
 }
 
 	
-if global.money <= 1
+if global.money[control_player] <= 1
 	if alarm_get(0) > 0 {
 	pause_build_timer = alarm_get(0)
 	alarm_set(0, -1)
-	ob_player_incpector.pice_money_tic = 0
+	global.pice_money_tic[control_player] = 0
 }
 
 if pause_build_timer != -1
-if global.money > 30 {
+if global.money[control_player] > 30 {
 	alarm_set(0, pause_build_timer)
 	pause_build_timer = -1
-	ob_player_incpector.pice_money_tic = b_pice
+	global.pice_money_tic[control_player] = b_pice
 }
 	
 

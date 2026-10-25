@@ -3,6 +3,7 @@ image_speed = 0;
 // Inherit the parent event
 event_inherited();
 
+control_player = -1
 b_name = "Construction yard"
 b_ready = -1 // 2 = "stop", 1 = "ready", 0 = "progress", -1 = "empty"
 cur_item = -1

@@ -13,6 +13,6 @@ function create_unit (_x, _y, _arr_ind_unit, _push_outside_boolean) {
 			y -= 16;
 		}
 	b_ready = 1;
-	ob_player_incpector.pice_money_tic = 0
+	global.pice_money_tic[control_player] = 0
 	return _u;
 }

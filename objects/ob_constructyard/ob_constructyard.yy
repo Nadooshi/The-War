@@ -10,7 +10,9 @@
   ],
   "managed":true,
   "name":"ob_constructyard",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"ob_entity","path":"objects/ob_entity/ob_entity.yy",},"propertyId":{"name":"control_player","path":"objects/ob_entity/ob_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1",},
+  ],
   "parent":{
     "name":"Bases",
     "path":"folders/Объекты/battlefield/Bases.yy",

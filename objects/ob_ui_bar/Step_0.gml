@@ -12,8 +12,8 @@ switch type_bar {
 	}
 	case 1: {
 		var _cof = 0
-		if ob_player_incpector.capasity_money > 0 {
-			_cof = global.money / ob_player_incpector.capasity_money
+		if global.capasity_money[0] > 0 {
+			_cof = global.money[0] / global.capasity_money[0]
 			visible = true;
 		}
 		image_xscale = clamp(4 * _cof, 0.5, 4)
@@ -21,8 +21,8 @@ switch type_bar {
 	}
 	case 2: {
 		var _cof = 0;
-		if ob_player_incpector.capacity_power > 0 {
-			_cof =	ob_player_incpector.pow_val / ob_player_incpector.capacity_power
+		if global.capacity_power[0] > 0 {
+			_cof =	global.pow_val[0] / global.capacity_power[0]
 			visible = true;
 		}
 		image_xscale = clamp(4 * _cof, 0.5, 4)

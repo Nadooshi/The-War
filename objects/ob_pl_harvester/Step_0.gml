@@ -84,8 +84,8 @@ switch cur_think {
 			x = _ob_base.x;
 			y = _ob_base.y - 6;
 			image_angle = 0;
-			if ob_player_incpector.capasity_money > global.money {
-				global.money++
+			if global.capasity_money[control_player] > global.money[control_player] {
+				global.money[control_player]++
 				in_cargo = max(in_cargo - 1, 0)
 			}
 		}

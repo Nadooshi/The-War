@@ -2,19 +2,24 @@
 if keyboard_check_pressed(vk_f3)
 	show_debug = !show_debug;
 
-if global.money + pice_money_tic > 0
-	global.money = max(global.money + pice_money_tic, 0)
-	
-var _n = 0;
-if instance_exists(ob_base)
-	_n = instance_number(ob_base)
-	pow_val = 0;
-	for (var i = 0; i < _n; i++){
-		var _b = instance_find(ob_base,i)
-		pow_val += _b.pow_gen
-	}
+// apply money flow per player
+for (var p = 0; p < global.max_players; p++) {
+	if global.money[p] + global.pice_money_tic[p] > 0
+		global.money[p] = max(global.money[p] + global.pice_money_tic[p], 0)
+}
 
-if global.money > 50
+// compute power per player
+for (var p = 0; p < global.max_players; p++)
+	global.pow_val[p] = 0;
+
+var _n = instance_number(ob_base);
+for (var i = 0; i < _n; i++) {
+	var _b = instance_find(ob_base, i)
+	if _b.control_player >= 0
+		global.pow_val[_b.control_player] += _b.pow_gen
+}
+
+if global.money[0] > 50
 	with ob_mark_ok {
 		if sprite_index = sp_mark_nomoney
 			instance_destroy()

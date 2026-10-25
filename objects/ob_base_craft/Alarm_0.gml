@@ -1,6 +1,6 @@
 /// @desc
 b_ready = 1;
-ob_player_incpector.pice_money_tic = 0;
+global.pice_money_tic[control_player] = 0;
 
 var _box = noone;
 if b_menu[cur_item].needbox != noone {
@@ -14,7 +14,7 @@ if b_menu[cur_item].needbox != noone {
 			}
 		}
 	if _box = noone {
-		global.money += b_menu[cur_item].cost
+		global.money[control_player] += b_menu[cur_item].cost
 		b_ready = 1
 	}
 }
