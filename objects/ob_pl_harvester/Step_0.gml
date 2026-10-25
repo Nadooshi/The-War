@@ -1,4 +1,13 @@
 /// @desc
+
+// check to death
+if array_length(units_inplatoon) = 0 {
+	if instance_exists(pl_target)
+		endmove(move_path);
+	instance_destroy()
+	exit;
+}
+
 if cur_think = think.player_control {
 // Inherit the parent event
 	event_inherited();

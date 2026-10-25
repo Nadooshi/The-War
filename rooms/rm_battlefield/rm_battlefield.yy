@@ -101,11 +101,6 @@
           -54,8,2,18,13,-4,8,-5,11,-55,8,-121,-2147483648,-120,8,-121,-2147483648,-120,8,-121,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_ground_dirtsand","path":"tilesets/ts_ground_dirtsand/ts_ground_dirtsand.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMREffectLayer":"","%Name":"Effect_layer","depth":700,"effectEnabled":true,"effectType":"_filter_whitenoise","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_layer","properties":[
-        {"name":"g_WhiteNoiseIntensity","type":0,"value":"1",},
-        {"name":"g_WhiteNoiseAnimation","type":0,"value":"0.025",},
-        {"name":"g_WhiteNoiseTexture","type":2,"value":"_filter_whitenoise_noise",},
-      ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
   ],
   "name":"rm_battlefield",
   "parent":{

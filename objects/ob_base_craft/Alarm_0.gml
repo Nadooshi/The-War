@@ -10,7 +10,6 @@ if b_menu[cur_item].needbox != noone {
 			_box = instance_find(b_menu[cur_item].needbox, i)
 			if _box.pl_inside = noone {
 				_box.pl_inside = create_unit(_box.x, _box.y, b_menu[cur_item], false)
-				_box.pl_inside.visible = false
 				exit;
 			}
 		}

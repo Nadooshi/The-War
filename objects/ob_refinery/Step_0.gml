@@ -32,6 +32,9 @@ if control_player = 0 {
 //------------------------------------------------------------------------------
 }
 
-if qe_unit != noone
-if qe_unit.cur_think == think.player_control
-	qe_unit = noone;
+if qe_unit != noone {
+	if not instance_exists(qe_unit)
+		qe_unit = noone;
+	else if qe_unit.cur_think == think.player_control
+		qe_unit = noone;
+}
