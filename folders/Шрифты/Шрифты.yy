@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Шрифты",
+  "name":"Шрифты",
+  "children":[],
+  "folderPath":"folders/Шрифты.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

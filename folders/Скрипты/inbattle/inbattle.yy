@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"inbattle",
+  "name":"inbattle",
+  "children":[],
+  "folderPath":"folders/Скрипты/inbattle.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

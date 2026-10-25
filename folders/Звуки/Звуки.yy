@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Звуки",
+  "name":"Звуки",
+  "children":[],
+  "folderPath":"folders/Звуки.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

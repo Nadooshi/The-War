@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Bases",
+  "name":"Bases",
+  "children":[],
+  "folderPath":"folders/Объекты/battlefield/Bases.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

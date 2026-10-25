@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"UI",
+  "name":"UI",
+  "children":[],
+  "folderPath":"folders/Объекты/UI.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

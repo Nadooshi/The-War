@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Примечания",
+  "name":"Примечания",
+  "children":[],
+  "folderPath":"folders/Примечания.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Расширения",
+  "name":"Расширения",
+  "children":[],
+  "folderPath":"folders/Расширения.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

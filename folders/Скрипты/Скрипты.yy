@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Скрипты",
+  "name":"Скрипты",
+  "children":[],
+  "folderPath":"folders/Скрипты.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

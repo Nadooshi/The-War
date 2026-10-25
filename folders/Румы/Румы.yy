@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Румы",
+  "name":"Румы",
+  "children":[],
+  "folderPath":"folders/Румы.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

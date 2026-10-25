@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Последовательности",
+  "name":"Последовательности",
+  "children":[],
+  "folderPath":"folders/Последовательности.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

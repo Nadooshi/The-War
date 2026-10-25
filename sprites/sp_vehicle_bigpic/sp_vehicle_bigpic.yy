@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Base_picture",
-    "path":"folders/РЎРїСЂР°Р№С‚С‹/Base_picture.yy",
+    "path":"folders/Спрайты/Base_picture.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

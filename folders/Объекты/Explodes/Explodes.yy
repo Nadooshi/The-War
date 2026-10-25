@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Explodes",
+  "name":"Explodes",
+  "children":[],
+  "folderPath":"folders/Объекты/Explodes.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

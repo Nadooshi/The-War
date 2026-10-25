@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Шейдеры",
+  "name":"Шейдеры",
+  "children":[],
+  "folderPath":"folders/Шейдеры.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}

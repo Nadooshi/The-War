@@ -1,0 +1,9 @@
+{
+  "$GMFolder":"",
+  "%Name":"Base_picture",
+  "name":"Base_picture",
+  "children":[],
+  "folderPath":"folders/Спрайты/Base_picture.yy",
+  "resourceType":"GMFolder",
+  "resourceVersion":"2.0",
+}
