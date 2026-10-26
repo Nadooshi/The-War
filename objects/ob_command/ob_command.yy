@@ -12,8 +12,8 @@
     "path":"folders/Объекты/battlefield/Bases.yy",
   },
   "parentObjectId":{
-    "name":"ob_base_craft",
-    "path":"objects/ob_base_craft/ob_base_craft.yy",
+    "name":"ob_base",
+    "path":"objects/ob_base/ob_base.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -47,6 +47,8 @@ array_push(base, _item)
 _item = new b_item("Hangar", 100, -5, 3, "sp_aircraftangar", ob_aircraftangar, 1, "Aircraft")
 array_push(base, _item)
 
+_item = new b_item("Hi-tech. center", 900, -15, 15, "sp_hitech", ob_hitech, 2, "Comm. center")
+array_push(base, _item)
 
 
 delete _item;
