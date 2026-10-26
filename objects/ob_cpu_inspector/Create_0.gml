@@ -122,29 +122,94 @@ function cpu_has_dep(_depend) {
 
 // decide what to build next
 function cpu_choose() {
+	// ---- emergency: low power / money near capacity ----
+	if global.pow_val[control_player] < 10
+		return cpu_item("Power plant");
+
+	if global.capasity_money[control_player] > 0
+	if global.money[control_player] >= global.capasity_money[control_player] * 0.9
+		return cpu_item("Silo");
+
+	// ---- build order ----
 	var _pp = cpu_count(ob_powerplant);
 	var _ref = cpu_count(ob_refinery);
 	var _bar = cpu_count(ob_barrack);
-	var _sil = cpu_count(ob_silo);
 	var _veh = cpu_count(ob_vehicle);
+	var _out = cpu_count(ob_outpost);      // radar
 	var _com = cpu_count(ob_command);
+	var _sp = cpu_count(ob_spaceport);     // starport
+	var _air = cpu_count(ob_aircraft);
+	var _hang = cpu_count(ob_aircraftangar);
+	var _sil = cpu_count(ob_silo);
 
-	if _pp == 0 or global.pow_val[control_player] <= 10
+	// 1. power plant
+	if _pp == 0
 		return cpu_item("Power plant");
+
+	// 2. refinery
 	if _ref == 0
 		return cpu_item("Refinery");
-	if _bar == 0
-		return cpu_item("Barracks");
-	if _sil == 0
-		return cpu_item("Silo");
-	if _veh == 0
-		return cpu_item("Veh. factory");
-	if _com == 0
-		return cpu_item("Comm. center");
+
+	// 3. barrack / vehicle factory (random)
+	if _bar == 0 and _veh == 0 {
+		if irandom(1) == 0
+			return cpu_item("Barracks");
+		else
+			return cpu_item("Veh. factory");
+	}
+
+	// 4. radar (outpost)
+	if _out == 0
+		return cpu_item("Outpost");
+
+	// 5. second refinery
 	if _ref < 2
 		return cpu_item("Refinery");
-	if _pp < 4
+
+	// 6. random among spaceport / command center / the other factory
+	if _sp == 0 or _com == 0 or _bar == 0 or _veh == 0 {
+		var _cand = [];
+		if _sp == 0
+			array_push(_cand, "Spaceport");
+		if _com == 0
+			array_push(_cand, "Comm. center");
+		if _bar == 0
+			array_push(_cand, "Barracks");
+		if _veh == 0
+			array_push(_cand, "Veh. factory");
+		return cpu_item(_cand[irandom(array_length(_cand) - 1)]);
+	}
+
+	// 7. aircraft
+	if _air == 0
+		return cpu_item("Aircraft");
+
+	// 8. hangar x3
+	if _hang < 3
+		return cpu_item("Hangar");
+
+	// 9. finish the whole baselist (except concrete)
+	if _sil == 0
+		return cpu_item("Silo");
+	if _ref < 3
+		return cpu_item("Refinery");
+	if _sp == 0
+		return cpu_item("Spaceport");
+	if _com == 0
+		return cpu_item("Comm. center");
+	if _bar == 0
+		return cpu_item("Barracks");
+	if _veh == 0
+		return cpu_item("Veh. factory");
+	if _out == 0
+		return cpu_item("Outpost");
+	if _air == 0
+		return cpu_item("Aircraft");
+	if _hang < 3
+		return cpu_item("Hangar");
+	if _pp < 6
 		return cpu_item("Power plant");
+
 	return noone;
 }
 

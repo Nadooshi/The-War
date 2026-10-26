@@ -24,17 +24,17 @@ switch cur_think {
 	case think.move: {
 		if not path_exists(move_path)
 		if instance_exists(pl_target) {
-			mp_grid_add_instances(global.grid, ob_entity, false)
+			grid_obstacles()
 			mp_grid_clear_cell(global.grid, floor(x / 32), floor(y / 32))
 			mp_grid_clear_cell(global.grid, floor(pl_target.x / 32), floor(pl_target.y / 32))
 			move_path = path_add()
 			if (mp_grid_path(global.grid, move_path,x, y, pl_target.x, pl_target.y, true)){
-				path_start(move_path, pl_speed, path_action_stop, false)
+				path_start(move_path, move_speed(), path_action_stop, false)
 				image_speed = 1;
 			}else{
 				path_delete(move_path)
 				mp_grid_clear_all(global.grid)
-				mp_grid_add_instances(global.grid, ob_entity, false)
+				grid_obstacles()
 				cur_think = think.idle // можно приделать вызов транспортника, если застрял				
 			}
 		}
@@ -54,7 +54,7 @@ switch cur_think {
 			}
 			path_delete(move_path)
 			mp_grid_clear_all(global.grid)
-			mp_grid_add_instances(global.grid, ob_entity, false)
+			grid_obstacles()
 		}
 	break;	
 	}

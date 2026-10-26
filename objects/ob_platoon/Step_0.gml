@@ -26,13 +26,13 @@ switch movement{
 				}
 				mp_grid_clear_all(global.grid)
 			} else {
-				mp_grid_add_instances(global.grid, ob_entity, false)
+				grid_obstacles()
 				mp_grid_clear_cell(global.grid, floor(x / 32), floor(y / 32))
 				mp_grid_clear_cell(global.grid, floor(pl_target.x / 32), floor(pl_target.y / 32))
 			}
 			move_path = path_add()
 			if (mp_grid_path(global.grid, move_path,x, y, pl_target.x, pl_target.y, true)){
-				path_start(move_path, pl_speed, path_action_stop, false)
+				path_start(move_path, move_speed(), path_action_stop, false)
 			}else{
 				endmove(move_path)
 				instance_destroy(pl_target)
@@ -50,7 +50,7 @@ switch movement{
 			if (_dist > 1) {
 				direction += angle_difference(_dir, direction) * 0.2;
 				image_angle = direction;
-				speed = min(pl_speed, _dist * 0.2);
+				speed = min(move_speed(), _dist * 0.2);
 			} else {
 				cur_think = think.idle;
 				speed = 0;

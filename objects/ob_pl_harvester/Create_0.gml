@@ -10,6 +10,7 @@ max_health = 100
 cur_health = 100
 unit_health = 100
 cur_unit_health = unit_health
+ignore_obstacles = false
 
 in_cargo = 0
 maxval_cargo = 300

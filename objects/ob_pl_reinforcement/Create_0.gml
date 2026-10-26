@@ -6,6 +6,7 @@ event_inherited();
 
 pl_speed = 1.5
 movement = type_move.none //у него уникальное перемещение, игрок на него не влияет
+ignore_obstacles = true
 
 max_health = 100
 cur_health = 100

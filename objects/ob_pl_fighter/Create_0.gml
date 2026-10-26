@@ -9,6 +9,7 @@ pl_speed = 1.2;
 unit_health = 150
 movement = type_move.circuite
 base_box = ob_aircraftangar
+ignore_obstacles = true
 
 att_dist_max = 3 * 32 // клетки * пиксели. Дистанция в пикселях.
 att_dist_min = 1 * 32

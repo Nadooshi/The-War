@@ -8,6 +8,7 @@ unit_name = "Infantry"
 pl_speed = 0.2;
 unit_health = 150
 movement = type_move.pathing
+ignore_obstacles = false
 
 att_dist_max = 3 * 32 // клетки * пиксели. Дистанция в пикселях.
 att_dist_min = 0

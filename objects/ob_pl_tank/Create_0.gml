@@ -7,6 +7,7 @@ unit_name = "Battle tank"
 
 pl_speed = 0.5;
 movement = type_move.pathing
+ignore_obstacles = false
 
 unit_health = 400
 dodge = 0.1 // repcent for dodge

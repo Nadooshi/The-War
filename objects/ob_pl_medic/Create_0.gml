@@ -8,6 +8,7 @@ unit_name = "Medic truck"
 pl_speed = 1;
 unit_health = 100
 movement = type_move.pathing
+ignore_obstacles = false
 
 att_dist_max = 1 * 32 // клетки * пиксели. Дистанция в пикселях.
 att_dist_min = 0

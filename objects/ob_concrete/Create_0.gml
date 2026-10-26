@@ -1,13 +1,11 @@
 /// @desc
-l_id = layer_get_id("road")
-tl_map = layer_tilemap_get_id(l_id)
-datatile = tilemap_get_at_pixel(tl_map,x,y)
 
-alarm_set(0, game_get_speed(gamespeed_fps))
+event_inherited();
+b_name = "Concrete"
+max_health = 100
+cur_health = max_health
 
-
-
-
-
-
-
+// paint road tile (visual + "road" indicator in ob_select_place)
+var _l = layer_get_id("road");
+var _t = layer_tilemap_get_id(_l);
+tilemap_set_at_pixel(_t, 1, x - 16, y - 16);

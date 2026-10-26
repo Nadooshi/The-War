@@ -62,12 +62,29 @@ reload_timer = []
 dodge = 0;
 cur_unit_health = 0
 
+function move_speed() {
+	var _s = pl_speed;
+	if not ignore_obstacles
+		if instance_position(x, y, ob_concrete) != noone
+			_s += 0.3;
+	return _s;
+}
+
+function grid_obstacles() {
+	mp_grid_add_instances(global.grid, ob_entity, false);
+	var _n = instance_number(ob_concrete);
+	for (var i = 0; i < _n; i++) {
+		var _c = instance_find(ob_concrete, i);
+		mp_grid_clear_cell(global.grid, floor(_c.x / 32), floor(_c.y / 32));
+	}
+}
+
 function endmove (_path) {
 	
 	if path_exists(_path){
 		instance_destroy(pl_target)
 		mp_grid_clear_all(global.grid)
-		mp_grid_add_instances(global.grid, ob_entity,false)
+		grid_obstacles()
 		cur_think = think.idle;
 	}
 }
@@ -79,7 +96,7 @@ function move_smooth(_pl_target){
 			var _dist = point_distance(x, y, _pl_target.x, _pl_target.y);
 			direction += angle_difference(_dir, direction) * 0.2;
 			image_angle = direction;
-			speed = min(pl_speed, _dist * 0.2);
+			speed = min(move_speed(), _dist * 0.2);
 		}
 }
 //=================================================================================
