@@ -7,10 +7,9 @@ function create_unit (_x, _y, _arr_ind_unit, _push_outside_boolean) {
 	
 	if _push_outside_boolean
 		with _u {
-			move_outside_all(irandom(360), 96);
-			move_snap(32, 32);
-			x -= 16;
-			y -= 16;
+			var _c = find_free_cell(floor(x / 32), floor(y / 32));
+			x = _c[0] * 32 + 16;
+			y = _c[1] * 32 + 16;
 		}
 	b_ready = 1;
 	global.pice_money_tic[control_player] = 0

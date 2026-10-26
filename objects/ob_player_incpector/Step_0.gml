@@ -3,10 +3,8 @@ if keyboard_check_pressed(vk_f3)
 	show_debug = !show_debug;
 
 // apply money flow per player
-for (var p = 0; p < global.max_players; p++) {
-	if global.money[p] + global.pice_money_tic[p] > 0
-		global.money[p] = max(global.money[p] + global.pice_money_tic[p], 0)
-}
+for (var p = 0; p < global.max_players; p++)
+	global.money[p] = max(global.money[p] + global.pice_money_tic[p], 0)
 
 // compute power per player
 for (var p = 0; p < global.max_players; p++)

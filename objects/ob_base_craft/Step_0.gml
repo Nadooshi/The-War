@@ -6,15 +6,23 @@ if global.current_construct = id
 if global.select_item <> -1 {
 	cur_item = global.select_item
 	var _b_item = global.current_menu[cur_item]
-	var _t = sec_to_step(_b_item.b_time)
-	if alarm_get(0) = -1
-		if b_ready = -1 {
-			b_ready = 0
-			alarm_set(0, _t)
-			time_build = _t
-		}
-	b_pice = -_b_item.cost / sec_to_step(_b_item.b_time)
-	global.pice_money_tic[control_player] = b_pice
+	if _b_item.b_time <= 0 {
+		// "Cancel" или пустой пункт — без постройки
+		cur_item = -1;
+		b_ready = -1;
+		global.select_item = -1;
+		global.pice_money_tic[control_player] = 0;
+	} else {
+		var _t = sec_to_step(_b_item.b_time)
+		if alarm_get(0) = -1
+			if b_ready = -1 {
+				b_ready = 0
+				alarm_set(0, _t)
+				time_build = _t
+			}
+		b_pice = -_b_item.cost / sec_to_step(_b_item.b_time)
+		global.pice_money_tic[control_player] = b_pice
+	}
 }
 
 if b_ready = 0 {

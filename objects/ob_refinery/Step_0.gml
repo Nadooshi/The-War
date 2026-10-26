@@ -49,6 +49,11 @@ if control_player >= 0 {
 				pl_target.master_id = id;
 				cur_think = think.move;
 			}
+		} else {
+			// ИИ: ставим харвестер на ближайшую свободную клетку
+			var _c = find_free_cell(floor(x / 32), floor(y / 32));
+			_h.x = _c[0] * 32 + 16;
+			_h.y = _c[1] * 32 + 16;
 		}
 	}
 }

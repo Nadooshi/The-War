@@ -33,6 +33,12 @@ if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
 
 // Unit list Vehicle
+
+_unit = new unit(base_menu.vehicle, "Trike", "sp_trike", "", 100, 3, ob_pl_trike, 1, noone);
+if _unit.base_is == b_is or b_is = base_menu.any
+	array_push(arr_unit, _unit);
+
+
 _unit = new unit(base_menu.vehicle, "Sand buggy", "sp_unitbuggy", "", 150, 3, ob_pl_buggy, 2, noone);
 if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
@@ -49,7 +55,7 @@ _unit = new unit(base_menu.vehicle, "MCV", "sp_unitMCV", "Comm. center", 999, 15
 if _unit.base_is == b_is or b_is = base_menu.any
 	array_push(arr_unit, _unit);
 
-// Unit lict Starport
+// Unit list Starport
 
 _unit = new unit(base_menu.starport, "Medic truck", "sp_unitmedic", "", 250, 5, ob_pl_medic, 3, noone);
 if _unit.base_is == b_is or b_is = base_menu.any

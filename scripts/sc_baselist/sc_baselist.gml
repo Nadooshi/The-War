@@ -14,7 +14,7 @@ function b_item(_name, _cost, _power, _b_time, _b_pic, _b_obj, _b_size, _depend)
 function baselist(_array) {
 base = _array
 
-var _item = new b_item("Concrete", 50, 0, 1.5, "sp_concrete", ob_concrete, 1, "Construction yard")
+_item = new b_item("Concrete", 50, 0, 1.5, "sp_concrete", ob_concrete, 1, "Construction yard")
 array_push(base, _item)
 
 _item = new b_item("Power plant", 300, 30, 3, "sp_powerplant", ob_powerplant, 2, "Construction yard")
@@ -27,6 +27,9 @@ _item = new b_item("Silo", 200, -5, 5, "sp_silo", ob_silo, 1, "Refinery")
 array_push(base, _item)
 
 _item = new b_item("Barracks", 300, -10, 5, "sp_barrack", ob_barrack, 2, "Power plant")
+array_push(base, _item)
+
+_item = new b_item("Wall", 100, 0, 2, "sp_wall", ob_wall, 1, "Barracks")
 array_push(base, _item)
 
 _item = new b_item("Veh. factory", 500, -25, 5, "sp_vehicle", ob_vehicle, 2, "Refinery")
