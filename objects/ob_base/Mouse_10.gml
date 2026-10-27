@@ -1,6 +1,4 @@
 /// @desc
-if control_player != 0
-	exit;
 
 var _pic = sprite_get_name(sprite_index) + "_smpic"
 
@@ -16,6 +14,8 @@ with ob_ui_healthbar {
 	traced_id = other.id	
 }
 
+if control_player != 0
+	exit;
 
 with ob_ui_bar {
 	switch type_bar {

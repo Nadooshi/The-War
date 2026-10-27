@@ -1,22 +1,20 @@
-/// @desc
+control_player = -1
+init = false
 
-// Inherit the parent event
-event_inherited();
-
-b_name = "Defense"
-max_health = 1500
+b_name = "name"
+max_health = 0
 cur_health = max_health
 
 // оружие базы (переопределяется в конкретных башнях)
 arr_weapon = weaponlist();
 init_weapon = [];
-init_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Mashingun")];
 
 dam_upg = 0;
-dam_mod = 1;
+dam_mod = 0;
 reload_timer = [];
-att_dist_max = 6 * 32;
+att_dist_max = 0 * 32;
 att_dist_min = 0;
+
 
 // стартовая перезарядка
 for (var i = 0; i < array_length(init_weapon); i++)

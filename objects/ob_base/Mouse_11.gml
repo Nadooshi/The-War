@@ -1,6 +1,6 @@
 /// @desc
-if control_player != 0
-	exit;
+//if control_player != 0
+//	exit;
 
 with ob_ui_cursel {
 	visible = false	

@@ -1,6 +1,21 @@
 // Универсальные функции атаки.
 // Используются и юнитами (ob_platoon_attack), и базами (ob_base_attack).
-
+//поиск цели
+function can_attack_find_target(_att_dist_max, _control_player){
+	var _tg = noone;
+	var _best = _att_dist_max;
+	for (var i = 0; i < instance_number(ob_platoon); i++) {
+		var _p = instance_find(ob_platoon, i);
+		if _p.control_player != _control_player and _p.control_player >= 0 {
+			var _d = distance_to_object(_p);
+			if _d < _best {
+				_best = _d;
+				_tg = _p;
+			}
+		}
+	}
+	return _tg;
+}
 // Обновляет таймеры перезарядки и возвращает массив готовности оружия.
 // _reload_timer изменяется (массив по ссылке).
 function can_attack_reload(_weapons, _reload_timer) {

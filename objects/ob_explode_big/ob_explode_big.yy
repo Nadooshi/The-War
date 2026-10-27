@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"ob_explode_unit",
+  "%Name":"ob_explode_big",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"ob_explode_unit",
+  "name":"ob_explode_big",
   "overriddenProperties":[],
   "parent":{
     "name":"Explodes",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sp_expl_1",
-    "path":"sprites/sp_expl_1/sp_expl_1.yy",
+    "name":"sp_expl_2",
+    "path":"sprites/sp_expl_2/sp_expl_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

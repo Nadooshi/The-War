@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings":[
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
+    {"name":"parts","order":16,"path":"folders/Спрайты/Base_picture/Buildings/parts.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"ob_aircraft","order":10,"path":"objects/ob_aircraft/ob_aircraft.yy",},
@@ -15,6 +16,7 @@
     {"name":"ob_cpu_inspector","order":5,"path":"objects/ob_cpu_inspector/ob_cpu_inspector.yy",},
     {"name":"ob_cursor","order":1,"path":"objects/ob_cursor/ob_cursor.yy",},
     {"name":"ob_entity","order":2,"path":"objects/ob_entity/ob_entity.yy",},
+    {"name":"ob_explode_big","order":1,"path":"objects/ob_explode_big/ob_explode_big.yy",},
     {"name":"ob_hitech","order":15,"path":"objects/ob_hitech/ob_hitech.yy",},
     {"name":"ob_mark_ok","order":7,"path":"objects/ob_mark_ok/ob_mark_ok.yy",},
     {"name":"ob_menucheck","order":2,"path":"objects/ob_menucheck/ob_menucheck.yy",},
@@ -41,6 +43,8 @@
     {"name":"ob_selected","order":5,"path":"objects/ob_selected/ob_selected.yy",},
     {"name":"ob_silo","order":6,"path":"objects/ob_silo/ob_silo.yy",},
     {"name":"ob_spaceport","order":7,"path":"objects/ob_spaceport/ob_spaceport.yy",},
+    {"name":"ob_turretcannon_head","order":19,"path":"objects/ob_turretcannon_head/ob_turretcannon_head.yy",},
+    {"name":"ob_turretcannon","order":18,"path":"objects/ob_turretcannon/ob_turretcannon.yy",},
     {"name":"ob_ui_bar","order":1,"path":"objects/ob_ui_bar/ob_ui_bar.yy",},
     {"name":"ob_ui_cursel","order":4,"path":"objects/ob_ui_cursel/ob_ui_cursel.yy",},
     {"name":"ob_ui_healthbar","order":5,"path":"objects/ob_ui_healthbar/ob_ui_healthbar.yy",},
@@ -84,6 +88,8 @@
     {"name":"sp_constructionyard_smpic","order":1,"path":"sprites/sp_constructionyard_smpic/sp_constructionyard_smpic.yy",},
     {"name":"sp_corsor","order":4,"path":"sprites/sp_corsor/sp_corsor.yy",},
     {"name":"sp_crate","order":3,"path":"sprites/sp_crate/sp_crate.yy",},
+    {"name":"sp_expl_2","order":1,"path":"sprites/sp_expl_2/sp_expl_2.yy",},
+    {"name":"sp_expl_3","order":2,"path":"sprites/sp_expl_3/sp_expl_3.yy",},
     {"name":"sp_groung_ts","order":1,"path":"sprites/sp_groung_ts/sp_groung_ts.yy",},
     {"name":"sp_healthbar","order":9,"path":"sprites/sp_healthbar/sp_healthbar.yy",},
     {"name":"sp_hitech_bigpic","order":29,"path":"sprites/sp_hitech_bigpic/sp_hitech_bigpic.yy",},
@@ -130,6 +136,9 @@
     {"name":"sp_target","order":1,"path":"sprites/sp_target/sp_target.yy",},
     {"name":"sp_trike_smpic","order":19,"path":"sprites/sp_trike_smpic/sp_trike_smpic.yy",},
     {"name":"sp_trike","order":20,"path":"sprites/sp_trike/sp_trike.yy",},
+    {"name":"sp_turretcannon_bigpic","order":34,"path":"sprites/sp_turretcannon_bigpic/sp_turretcannon_bigpic.yy",},
+    {"name":"sp_turretcannon_smpic","order":33,"path":"sprites/sp_turretcannon_smpic/sp_turretcannon_smpic.yy",},
+    {"name":"sp_turretcannon","order":15,"path":"sprites/sp_turretcannon/sp_turretcannon.yy",},
     {"name":"sp_uipanel1","order":4,"path":"sprites/sp_uipanel1/sp_uipanel1.yy",},
     {"name":"sp_uipanel2","order":5,"path":"sprites/sp_uipanel2/sp_uipanel2.yy",},
     {"name":"sp_unitbuggy_smpic","order":17,"path":"sprites/sp_unitbuggy_smpic/sp_unitbuggy_smpic.yy",},

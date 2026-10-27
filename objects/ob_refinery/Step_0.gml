@@ -19,7 +19,7 @@ if control_player >= 0 {
 	if not _ok {
 		var _h = instance_create_layer(x, y, "units_layer", ob_pl_harvester);
 		_h.control_player = control_player
-		array_push(_h.units_inplatoon, ob_pl_harvester)
+		array_push(_h.units_inplatoon, _h)
 		_h.pl_freeplace -= 3;
 
 		if control_player = 0 {

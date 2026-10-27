@@ -32,6 +32,9 @@ array_push(base, _item)
 _item = new b_item("Wall", 100, 0, 2, "sp_wall", ob_wall, 1, "Barracks")
 array_push(base, _item)
 
+_item = new b_item("Turret cannon", 250, 5, 4, "sp_turretcannon", ob_turretcannon, 1, "Outpost")
+array_push(base, _item)
+
 _item = new b_item("Veh. factory", 500, -25, 5, "sp_vehicle", ob_vehicle, 2, "Refinery")
 array_push(base, _item)
 

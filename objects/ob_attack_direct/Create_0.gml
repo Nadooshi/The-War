@@ -5,6 +5,6 @@ att_side = noone;
 global.attack_side = noone;
 global.defence_side = noone;
 
-
+alarm_set(0, 60)
 
 

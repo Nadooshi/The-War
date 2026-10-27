@@ -10,6 +10,6 @@ ready_to_attack = false;
 init_weapon = [];
 
 att_dist_max = 0 * 32 // клетки * пиксели. Дистанция в пикселях.
-att_dist_min = 0
+att_dist_min = 0 * 32
 
 alarm_set(0, 2)// init

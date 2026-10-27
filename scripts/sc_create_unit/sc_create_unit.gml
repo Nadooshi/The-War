@@ -1,6 +1,6 @@
 function create_unit (_x, _y, _arr_ind_unit, _push_outside_boolean) {
 	var _u = instance_create_layer(_x, _y, "units_layer", _arr_ind_unit.obj)
-	array_push(_u.units_inplatoon, _arr_ind_unit.obj)
+	array_push(_u.units_inplatoon, _u)
 	_u.pl_freeplace -= _arr_ind_unit.take_place;
 	_u.control_player = control_player;
 	_u.cur_think = think.idle;

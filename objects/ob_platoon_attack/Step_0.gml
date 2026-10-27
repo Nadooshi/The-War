@@ -37,31 +37,48 @@ if _tg != noone {
 
 	// shooting
 	if instance_exists(_tg)
-	if object_is_ancestor(_tg.object_index, ob_platoon)
 	if cur_think == think.attack {
-		var _def_pl = mark_attack.def_side;
-		for (var i = 0; i < array_length(init_weapon); i++) {
-			if w_ok[i] {
-				reload_timer[i] = sec_to_step(init_weapon[i].reload_time);
-				for (var _u = 0; _u < array_length(units_inplatoon); _u++)
-				for (var _nf = 0; _nf < init_weapon[i].number_fire; _nf++) {
-					if movement != type_move.circuite {
-						if array_length(_def_pl.units_inplatoon) = 0 {
-							cur_think = think.idle;
-							break;
+		if object_is_ancestor(_tg.object_index, ob_platoon) {
+			// цель — отряд юнитов
+			var _def_pl = mark_attack.def_side;
+			for (var i = 0; i < array_length(init_weapon); i++) {
+				if w_ok[i] {
+					reload_timer[i] = sec_to_step(init_weapon[i].reload_time);
+					for (var _u = 0; _u < array_length(units_inplatoon); _u++)
+					for (var _nf = 0; _nf < init_weapon[i].number_fire; _nf++) {
+						if movement != type_move.circuite {
+							if array_length(_def_pl.units_inplatoon) = 0 {
+								cur_think = think.idle;
+								break;
+							}
+						} else {
+							cur_think = think.move
 						}
-					} else {
-						cur_think = think.move
+						var target_index = max(irandom_range(0, array_length(_def_pl.units_inplatoon) - 1), 0);
+						var _t_unit = _def_pl.units_inplatoon[target_index];
+						if not instance_exists(_t_unit)
+							continue;
+						var _t_br = _t_unit.unit_type_brone;
+						var f_dmg = can_attack_damage(init_weapon[i], dam_mod, dam_upg, _t_br, _def_pl.dodge);
+						_t_unit.cur_unit_health -= f_dmg;
 					}
-					var target_index = max(irandom_range(0, array_length(_def_pl.units_inplatoon) - 1), 0);
-					var _t_br = _def_pl.units_inplatoon[target_index].unit_type_brone;
-					var f_dmg = can_attack_damage(init_weapon[i], dam_mod, dam_upg, _t_br, _def_pl.dodge);
-					_def_pl.units_inplatoon[target_index].cur_unit_health -= f_dmg;
+				}
+			}
+			with _def_pl
+				event_perform(ev_other, ev_user0)// refresh platoon
+		} else if object_is_ancestor(_tg.object_index, ob_base) and _tg.object_index != ob_concrete {
+			// цель — здание (кроме concrete)
+			for (var i = 0; i < array_length(init_weapon); i++) {
+				if w_ok[i] {
+					reload_timer[i] = sec_to_step(init_weapon[i].reload_time);
+					for (var _u = 0; _u < array_length(units_inplatoon); _u++)
+					for (var _nf = 0; _nf < init_weapon[i].number_fire; _nf++) {
+						var f_dmg = can_attack_damage(init_weapon[i], dam_mod, dam_upg, brone_types.no_brone, 0);
+						_tg.cur_health -= f_dmg;
+					}
 				}
 			}
 		}
-		with _def_pl
-			event_perform(ev_other, ev_user0)// refresh platoon
 	}
 }
 ;

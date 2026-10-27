@@ -1,8 +1,8 @@
 /// @desc refresh platoon
 cur_unit_health = min(unit_health, cur_unit_health)
 
-for (var i = 0; i < array_length(units_inplatoon); i++) { // нельзя заменить array_length(units_inplatoon) на _len. Тут массив изменяется.
-	if units_inplatoon[i].cur_unit_health <= 0 
+for (var i = array_length(units_inplatoon) - 1; i >= 0; i--) {
+	if not instance_exists(units_inplatoon[i]) or units_inplatoon[i].cur_unit_health <= 0 
 		array_delete(units_inplatoon, i, 1)
 }
 

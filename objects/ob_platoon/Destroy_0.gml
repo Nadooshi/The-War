@@ -1,1 +1,1 @@
-instance_create_layer(x, y, "markers_layer", ob_explode_unit)
+instance_create_layer(x, y, "markers_layer", ob_explode_small)
