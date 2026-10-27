@@ -15,7 +15,7 @@ att_dist_max = 2 * 32 // клетки * пиксели. Дистанция в п
 att_dist_min = 0
 
 arr_ind = array_find_ind_to_name(arr_unit, unit_name)
-unit_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Mashingun")];
+init_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Mashingun")];
 unit_type_brone = brone_types.vehicle_light;
 
 

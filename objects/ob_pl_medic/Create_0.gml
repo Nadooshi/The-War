@@ -16,7 +16,7 @@ dodge = 0.2 // repcent for dodge
 
 arr_ind = array_find_ind_to_name(arr_unit, unit_name)
 arr_weapon = weaponlist();
-unit_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Medical cure")];
+init_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Medical cure")];
 unit_type_brone = brone_types.vehicle_light
 
 

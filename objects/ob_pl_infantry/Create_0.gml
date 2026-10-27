@@ -16,7 +16,7 @@ dodge = 0.75 // repcent for dodge
 
 arr_ind = array_find_ind_to_name(arr_unit, unit_name)
 arr_weapon = weaponlist();
-unit_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Rifle")];
-unit_weapon[1] = arr_weapon[array_find_ind_to_name(arr_weapon, "Grenade")];
+init_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Rifle")];
+init_weapon[1] = arr_weapon[array_find_ind_to_name(arr_weapon, "Grenade")];
 unit_type_brone = brone_types.infantry_light
 

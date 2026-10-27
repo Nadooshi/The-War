@@ -1,6 +1,6 @@
 /// @desc
-
-view_visible[1] = true;
+if control_player == 0
+	view_visible[1] = true;
 
 
 

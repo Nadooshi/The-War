@@ -3,14 +3,11 @@ if not init
 	exit;
 
 // reloading
-var w_ok = array_create(array_length(unit_weapon), false);
-for (var t = 0; t < array_length(unit_weapon); t++) {
-	reload_timer[t] -= 1
-	if reload_timer[t] <= 0 {
-		w_ok[t] = true;
+var w_ok = can_attack_reload(init_weapon, reload_timer);
+for (var t = 0; t < array_length(w_ok); t++)
+	if w_ok[t]
 		ready_to_attack = true
-	}
-}
+
 // Inherit the parent event
 event_inherited()
 
@@ -43,12 +40,11 @@ if _tg != noone {
 	if object_is_ancestor(_tg.object_index, ob_platoon)
 	if cur_think == think.attack {
 		var _def_pl = mark_attack.def_side;
-		for (var i = 0; i < array_length(unit_weapon); i++) {
+		for (var i = 0; i < array_length(init_weapon); i++) {
 			if w_ok[i] {
-				reload_timer[i] = sec_to_step(unit_weapon[i].reload_time);
-				var _dmg = unit_weapon[i].damage * dam_mod + dam_upg;
+				reload_timer[i] = sec_to_step(init_weapon[i].reload_time);
 				for (var _u = 0; _u < array_length(units_inplatoon); _u++)
-				for (var _nf = 0; _nf < unit_weapon[i].number_fire; _nf++) {
+				for (var _nf = 0; _nf < init_weapon[i].number_fire; _nf++) {
 					if movement != type_move.circuite {
 						if array_length(_def_pl.units_inplatoon) = 0 {
 							cur_think = think.idle;
@@ -59,10 +55,8 @@ if _tg != noone {
 					}
 					var target_index = max(irandom_range(0, array_length(_def_pl.units_inplatoon) - 1), 0);
 					var _t_br = _def_pl.units_inplatoon[target_index].unit_type_brone;
-					var f_dmg = calculate_damage(_dmg, unit_weapon[i].w_type_damage, _t_br);
-					if (calculate_accuracy(unit_weapon[i].accuracy, _def_pl.dodge)) {
-						_def_pl.units_inplatoon[target_index].cur_unit_health -= f_dmg;
-					}
+					var f_dmg = can_attack_damage(init_weapon[i], dam_mod, dam_upg, _t_br, _def_pl.dodge);
+					_def_pl.units_inplatoon[target_index].cur_unit_health -= f_dmg;
 				}
 			}
 		}

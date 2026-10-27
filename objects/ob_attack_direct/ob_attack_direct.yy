@@ -36,5 +36,5 @@
     "path":"sprites/sp_attack_direct/sp_attack_direct.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

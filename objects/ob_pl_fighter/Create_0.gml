@@ -17,6 +17,6 @@ dodge = 0.99 // repcent for dodge max 1
 
 arr_ind = array_find_ind_to_name(arr_unit, unit_name)
 arr_weapon = weaponlist();
-unit_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Mashingun")];
-unit_weapon[1] = arr_weapon[array_find_ind_to_name(arr_weapon, "Hellfire rocket")];
+init_weapon[0] = arr_weapon[array_find_ind_to_name(arr_weapon, "Mashingun")];
+init_weapon[1] = arr_weapon[array_find_ind_to_name(arr_weapon, "Hellfire rocket")];
 unit_type_brone = brone_types.vehicle_light
